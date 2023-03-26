@@ -1,0 +1,69 @@
+﻿body {
+    background-color: dodgerblue;
+}
+main {
+    padding: 20px;
+    background-color:red;
+    border: 2px solid;
+    
+}
+
+#menu li {
+    display: inline;
+}
+
+    #menu a {
+        background-color: black;
+        line-height: 2.8em;
+        padding: 15px 50px;
+
+
+
+    }
+        #menu a:hover {
+            background-color: Red;
+        }
+
+a {
+    color: white;
+}
+.container{
+    border: 2px solid;
+    background-color:azure;
+
+}
+img {
+    height: 200px;
+    width: 200px;
+    border: 2px solid;
+    margin: 10px;
+
+
+}
+img:hover{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+h3 {
+    padding: 10px;
+}
+#Back {
+    float: right;
+}
+p {
+    float:left;
+    margin: 10px;
+}
+#Sem1 {
+    float: left;
+}
+#sem2 {
+    float: right;
+}
+button {
+    background-color: black;
+    line-height: 2.8em;
+    padding: 15px 50px;
+}
+
+

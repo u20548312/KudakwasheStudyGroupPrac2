@@ -1,0 +1,39 @@
+﻿@model IEnumerable<KudakwasheStudyGroupPrac2.Models.StudyGroupModel>
+@{
+    ViewBag.Title = "StudyGroup";
+}
+
+<h2>List of People</h2>
+
+<table class="table">
+    <tr style=" background-color:green">
+        <th>@Html.DisplayNameFor(model => model.StudentNo)</th>
+        <th>@Html.DisplayNameFor(model => model.Name)</th>
+        <th>@Html.DisplayNameFor(model => model.Surname)</th>
+        <th>@Html.DisplayNameFor(model => model.EmailAddress)</th>
+        <th>@Html.DisplayNameFor(model => model.myLink)</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.StudentNo)</td>
+            <td>@Html.DisplayFor(modelItem => item.Name)</td>
+            <td>@Html.DisplayFor(modelItem => item.Surname)</td>
+            <td>@Html.DisplayFor(modelItem => item.EmailAddress)</td>
+            <td><a class="btn" style="background-color: green" href="@Html.DisplayFor(modelItem => item.myLink)">Link</a></td>
+        </tr>
+    }
+</table>
+<style>
+    table th {
+        border: 1px solid;
+    }
+
+    table tr {
+        border: 1px solid;
+    }
+
+    table td {
+        border: 1px solid;
+    }
+</style>
