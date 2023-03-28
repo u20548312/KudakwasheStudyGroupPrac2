@@ -16,7 +16,7 @@ main {
         background-color: black;
         line-height: 2.8em;
         padding: 15px 50px;
-
+        border: 2px solid;
 
 
     }
@@ -27,7 +27,7 @@ main {
 a {
     color: white;
 }
-.container{
+.container {
     border: 2px solid;
     background-color:azure;
 
@@ -50,20 +50,20 @@ h3 {
 #Back {
     float: right;
 }
-p {
+#Hob {
     float:left;
     margin: 10px;
 }
-#Sem1 {
-    float: left;
-}
-#sem2 {
-    float: right;
-}
+
 button {
-    background-color: black;
+    background-color: darkgrey;
     line-height: 2.8em;
-    padding: 15px 50px;
+    padding: 15px 30px;
+}
+
+#Sem1 {
+    margin: 10px;
+    float: left;
 }
 
 

@@ -4,6 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--LatestcompiledBootstrapJavaScript-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+    <!--latestjQuerylibrary-->
+    <script src="https://code.jquery.com/jquery-latest.js">
+    </script>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -19,9 +26,9 @@
                 <ul class="navbar-nav flex-grow-1">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            List of People
+                            List of People 
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-dark" role="menu">
+                        <ul class="dropdown-menu dropdown-menu-dark" >
                             <li><a class="dropdown-item" href="~/HTML/Kudakwashe.html">Kudakwashe</a></li>
                             <li><a class="dropdown-item" href="~/HTML/Hector.html">Hector</a></li>
                             <li><a class="dropdown-item" href="~/HTML/Raphael.html">Raphael</a></li>
@@ -49,3 +56,5 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
+
