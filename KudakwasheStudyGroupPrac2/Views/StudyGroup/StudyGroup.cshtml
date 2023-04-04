@@ -20,7 +20,7 @@
             <td>@Html.DisplayFor(modelItem => item.Name)</td>
             <td>@Html.DisplayFor(modelItem => item.Surname)</td>
             <td>@Html.DisplayFor(modelItem => item.EmailAddress)</td>
-            <td><a class="btn" style="background-color: green" href="@Html.DisplayFor(modelItem => item.myLink)">Link</a></td>
+            <td><a class="btn" style="background-color: green" href=@Href(item.myLink)>Link</a></td>
         </tr>
     }
 </table>

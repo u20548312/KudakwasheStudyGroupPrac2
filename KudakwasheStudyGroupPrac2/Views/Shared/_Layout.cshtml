@@ -4,13 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!--LatestcompiledBootstrapJavaScript-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-    </script>
-    <!--latestjQuerylibrary-->
-    <script src="https://code.jquery.com/jquery-latest.js">
-    </script>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -23,17 +16,18 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            List of People 
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            List of People<span class="caret"></span>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-dark" >
-                            <li><a class="dropdown-item" href="~/HTML/Kudakwashe.html">Kudakwashe</a></li>
-                            <li><a class="dropdown-item" href="~/HTML/Hector.html">Hector</a></li>
-                            <li><a class="dropdown-item" href="~/HTML/Raphael.html">Raphael</a></li>
-                            <li><a class="dropdown-item" href="~/HTML/Claudius.html">Claudius</a></li>
-                            <li><a class="dropdown-item" href="~/HTML/Kgaugelo.html">Kgaugelo</a></li>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("List Of People", "StudyGroup", "StudyGroup")</li> 
+                            <li><a href="~/HTML/Kudakwashe.html">Kudakwashe</a></li>
+                            <li><a href="~/HTML/Hector.html">Hector</a></li>
+                            <li><a href="~/HTML/Raphael.html">Raphael</a></li>
+                            <li><a href="~/HTML/Claudius.html">Claudius</a></li>
+                            <li><a href="~/HTML/Kgaugelo.html">Kgaugelo</a></li>
                         </ul>
                     </li>
                     <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
