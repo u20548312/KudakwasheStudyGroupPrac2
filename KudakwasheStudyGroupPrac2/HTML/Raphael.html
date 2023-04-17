@@ -4,6 +4,9 @@
     <meta charset="utf-8" />
     <title>Raphael</title>
     <link rel="stylesheet" type="text/css" href="HTMLStyle.css" />
+    <!--LatestcompiledandminifiedBootstrapCSS-->
+    <link rel ="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+       
 </head>
 <body>
     <main>
@@ -22,25 +25,20 @@
 
         <hr />
         <br />
-        <div class="container">
-            <h3> Biography and Background</h3>
-            <div class="row">
-                <div id="Image" class="col">
-                    <img src="Images/Raph1.jpg" alt="Image" />
-                    <p id="Back">
-                        Raphael Alphonso is an Information Science student from Pretoria East.
-                    </p>
-                </div>
+        <div class="panel panel-default">
+            <div class="panel-heading"> <h3> Biography and Background</h3></div>
+            <div class="panel-body">
+                <img src="Images/Raph1.jpg" alt="Image" />
+                <p id="Back">
+                    Raphael Alphonso is an Information Science student from Pretoria East.
+                </p>
             </div>
         </div>
-
         <br />
 
-        <div class="container">
-            <h3> Hobbies</h3>
-            <br />
-            <div>
-
+        <div class="panel panel-default">
+            <div class="panel-heading"><h3>Hobbies</h3></div>
+            <div class="panel-body">
                 <p id="Hob">Hobbies iclude Photography, content creation and art. </p>
                 <img id="Image2" src="Images/Raph2.jpg" alt="Image" />
 
@@ -48,31 +46,40 @@
         </div>
 
 
+
         <br />
 
-        <div class="container">
-            <h3> Modules</h3>
-            <br />
-            <div id="Sem1">
-                <h4>Semester 1</h4>
-                <p>
-                    INY711<br />
-                    INY713<br />
-                    INY714
-                </p>
-            </div>
-            <div id="Sem2">
-                <h4>Semester 2</h4>
-                <p>
-                    INY715<br />
-                    INY716<br />
-                    INY717<br />
-                    INY722
-                </p>
-            </div>
+        <div class="panel panel-default">
+            <div class="panel-heading"><h3>Modules</h3></div>
+            <div class="panel-body">
+                <table>
+                    <tr>
+                        <th>Modules Semester 1</th>
+                        <th>Modules Semester 2</th>
+                    </tr>
+                    <tr>
+                        <td>INY711</td>
+                        <td>INY715</td>
+                    </tr>
+                    <tr>
+                        <td>INY713</td>
+                        <td>INY716</td>
 
+                    </tr>
+                    <tr>
+                        <td>INY714</td>
+                        <td>INY717</td>
+                    </tr>
+                </table>
+            </div>
         </div>
+
     </main>
- 
+     <!--LatestcompiledBootstrapJavaScript-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+    <!--latestjQuerylibrary-->
+    <script src="https://code.jquery.com/jquery-latest.js">
+    </script>
 </body>
 </html>

@@ -72,5 +72,14 @@ button {
     border: 2px solid;
     background-color: azure;
 }
+td th{
+    text-align: center;
+}
+
+table {
+    width: 60%;
+    align-self: center;
+}
+
 
 

@@ -12,6 +12,7 @@
         <th>@Html.DisplayNameFor(model => model.Surname)</th>
         <th>@Html.DisplayNameFor(model => model.EmailAddress)</th>
         <th>@Html.DisplayNameFor(model => model.myLink)</th>
+        <th>Delete</th>
     </tr>
     @foreach (var item in Model)
     {
@@ -21,19 +22,29 @@
             <td>@Html.DisplayFor(modelItem => item.Surname)</td>
             <td>@Html.DisplayFor(modelItem => item.EmailAddress)</td>
             <td><a class="btn" style="background-color: green" href=@Href(item.myLink)>Link</a></td>
+            <td class="btn" style="background-color: green" onclick="deleteRow()">Delete</td>
         </tr>
     }
 </table>
-<style>
-    table th {
-        border: 1px solid;
-    }
+    <style type="text/css">
+        table th {
+            border: 1px solid;
+        }
 
-    table tr {
-        border: 1px solid;
-    }
+        table tr {
+            border: 1px solid;
+        }
 
-    table td {
-        border: 1px solid;
+        table td {
+            border: 1px solid;
+            text-align: center;
+        }
+    </style>
+
+@section scripts{
+    <script type="text/javascript">
+        function deleteRow() {
+           document.getElementsByClass("tr").remove();
+        }
+    </script>
     }
-</style>
