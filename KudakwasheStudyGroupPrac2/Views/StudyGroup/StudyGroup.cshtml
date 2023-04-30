@@ -4,47 +4,54 @@
 }
 
 <h2>List of People</h2>
-
-<table class="table">
+<br />
+<div>@Html.ActionLink("Create New", "Create", new { @class = "btn btn-info btn-md" })</div>
+<br />
+<form>
+    <label for="search">Search String:</label><br />
+    <input type="search" id="search" onkeyup="myFunction()"/>
+    <input type="submit" value="Submit">
+</form>
+<table class="table" id="mtable">
     <tr style=" background-color:green">
         <th>@Html.DisplayNameFor(model => model.StudentNo)</th>
         <th>@Html.DisplayNameFor(model => model.Name)</th>
         <th>@Html.DisplayNameFor(model => model.Surname)</th>
         <th>@Html.DisplayNameFor(model => model.EmailAddress)</th>
-        <th>@Html.DisplayNameFor(model => model.myLink)</th>
         <th>Delete</th>
     </tr>
     @foreach (var item in Model)
     {
-        <tr>
+        <tr id="row">
             <td>@Html.DisplayFor(modelItem => item.StudentNo)</td>
-            <td>@Html.DisplayFor(modelItem => item.Name)</td>
+            <td id="name">@Html.DisplayFor(modelItem => item.Name)</td>
             <td>@Html.DisplayFor(modelItem => item.Surname)</td>
             <td>@Html.DisplayFor(modelItem => item.EmailAddress)</td>
-            <td><a class="btn" style="background-color: green" href=@Href(item.myLink)>Link</a></td>
-            <td class="btn" style="background-color: green" onclick="deleteRow()">Delete</td>
+            <td><input type="button" style="background-color: green" onclick="deleteRow(this)" value="Delete"></td>
         </tr>
+
     }
 </table>
-    <style type="text/css">
-        table th {
-            border: 1px solid;
-        }
+<button>Save to local storage</button> <button>Retrieve from local storage</button> <button>Clear local storage</button>
+<style type="text/css">
+    table th {
+        border: 1px solid;
+    }
 
-        table tr {
-            border: 1px solid;
-        }
+    table tr {
+        border: 1px solid;
+    }
 
-        table td {
-            border: 1px solid;
-            text-align: center;
-        }
-    </style>
+    table td {
+        border: 1px solid;
+        text-align: center;
+    }
+</style>
 
 @section scripts{
-    <script type="text/javascript">
-        function deleteRow() {
-           document.getElementsByClass("tr").remove();
-        }
+    <script type="text/javascript" src="@Url.Content("~/Scripts/PeopleScript.js")">
+
     </script>
-    }
+
+}
+

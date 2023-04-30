@@ -4,51 +4,58 @@
     <meta charset="utf-8" />
     <title>Raphael</title>
     <link rel="stylesheet" type="text/css" href="HTMLStyle.css" />
+
+    <link rel="stylesheet" type="text/css" href="HTMLStyle.css" />
     <!--LatestcompiledandminifiedBootstrapCSS-->
-    <link rel ="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-       
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!--LatestcompiledBootstrapJavaScript-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!--latestjQuerylibrary-->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link href="../Content/Site.css" rel="stylesheet" />
 </head>
 <body>
     <main>
         <div id="name"><h1>Raphael Alfonso</h1></div>
         <hr />
-        <div id="menu">
-            <a href="/Home/Index">Main</a>
-            <a href="/StudyGroup/StudyGroup">List</a>
-            <a href="Kudakwashe.html">Kudakwashe</a>
-            <a href="Hector.html">Hector</a>
-            <a href="Raphael.html">Raphael</a>
-            <a href="Claudius.html">Claudius</a>
-            <a href="Kgaugelo.html">Kgaugelo</a>
-            <button onclick="history.back()">Back</button>
-        </div>
-
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li class="m_item"><a href="/Home/Index">Main</a></li>
+                    <li class="m_item"><a href="/StudyGroup/StudyGroup">List</a></li>
+                    <li class="m_item"><a href="Kudakwashe.html">Kudakwashe</a></li>
+                    <li class="m_item"><a href="Hector.html">Hector</a></li>
+                    <li class="m_item"><a href="Raphael.html">Raphael</a></li>
+                    <li class="m_item"><a href="Claudius.html">Claudius</a></li>
+                    <li class="m_item"><a href="Kgaugelo.html">Kgaugelo</a></li>
+                    <li class="m_item"><a href="javascrript:history.back()">Back</a></li>
+                </ul>              
+            </div>
+        </nav>
         <hr />
         <br />
         <div class="panel panel-default">
             <div class="panel-heading"> <h3> Biography and Background</h3></div>
             <div class="panel-body">
-                <img src="Images/Raph1.jpg" alt="Image" />
-                <p id="Back">
+                <p >
+                    <img src="Images/Raph1.jpg" alt="Image"  style="float:left; width:100px; height:150px;object-fit:contain; padding: 5px"/>
                     Raphael Alphonso is an Information Science student from Pretoria East.
                 </p>
             </div>
         </div>
         <br />
-
         <div class="panel panel-default">
             <div class="panel-heading"><h3>Hobbies</h3></div>
             <div class="panel-body">
-                <p id="Hob">Hobbies iclude Photography, content creation and art. </p>
-                <img id="Image2" src="Images/Raph2.jpg" alt="Image" />
-
+                <p>
+                    Hobbies iclude Photography, content creation and art.
+                    <img id="Image2" src="Images/Raph2.jpg" alt="Image" style="float:right; width:150px; height:150px;object-fit:contain" />
+                </p>
             </div>
         </div>
-
-
-
         <br />
-
         <div class="panel panel-default">
             <div class="panel-heading"><h3>Modules</h3></div>
             <div class="panel-body">
@@ -75,11 +82,5 @@
         </div>
 
     </main>
-     <!--LatestcompiledBootstrapJavaScript-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-    </script>
-    <!--latestjQuerylibrary-->
-    <script src="https://code.jquery.com/jquery-latest.js">
-    </script>
 </body>
 </html>

@@ -8,6 +8,7 @@ namespace KudakwasheStudyGroupPrac2.Models
 {
     public class StudyGroupModel
     {
+        [Key]
         [Display(Name = "Student Number")]
         public int StudentNo { get; set; }
 
@@ -20,8 +21,7 @@ namespace KudakwasheStudyGroupPrac2.Models
         [Display(Name = "Email Addresss")]
         public string EmailAddress { get; set; }
 
-        [Display(Name = "Link to personal page")]
-        public string myLink { get; set; }
+      
 
     }
 }
