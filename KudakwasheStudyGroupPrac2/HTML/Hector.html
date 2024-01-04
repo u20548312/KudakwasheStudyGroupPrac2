@@ -23,7 +23,7 @@
             background-color: #f0f5ff;
         }
 
-        
+
         .wrapper {
             width: 1200px;
             margin: auto;
@@ -74,6 +74,31 @@
                 display: block;
             }
     </style>
+    <script>
+        var tabID = document.querySelector(".wrapper");
+        var tabButton = document.querySelectorAll(".tab-button");
+        var contents = document.querySelectorAll(".tab-content");
+
+        function openTab(event, tabID) {
+            // Hide all tab contents
+            contents = document.getElementsByClassName("tab-content");
+            for (i = 0; i < contents.length; i++) {
+                contents[i].style.display = "none";
+            }
+
+            // Deactivate all tab links
+            tabButton = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabButton.length; i++) {
+                tabButton[i].className = tabButton[i].className.replace("active", "");
+            }
+
+            // Show the selected tab content and activate the selected tab link
+            document.getElementById(tabID).style.display = "block";
+            event.currentTarget.className += "active";
+        }
+
+
+    </script>
 </head>
 <body>
     <main>
@@ -97,9 +122,9 @@
         <br />
         <div class="wrapper">
             <div class="buttonWrapper">
-                <button class="tab-button active" style="border-top-left-radius: 10px;" data-id="background" onlick="openTab(evt, "background")">Biography and Background</button>
-                <button class="tab-button" data-id="hobbies" onlick="openTab(evt, "hobbies")">Hobbies</button>
-                <button class="tab-button" style="border-top-right-radius: 10px;" onlick="openTab(evt, "modules")">Modules</button>
+                <button class="tab-button active" style="border-top-left-radius: 10px;" data-id="background" onclick= "openTab(event, 'background')">Biography and Background</button>
+                <button class="tab-button" data-id="hobbies" onclick="openTab(event, 'hobbies')">Hobbies</button>
+                <button class="tab-button" style="border-top-right-radius: 10px;" onclick="openTab(event, 'modules')">Modules</button>
             </div>
             <div class="contentWrapper">
                 <p class="tab-content active" id="background">
@@ -126,31 +151,7 @@
             </div>
          </div>
     </main>
-    <script>
-        var tabs = document.querySelector(".wrapper");
-        var tabButton = document.querySelectorAll(".tab-button");
-        var contents = document.querySelectorAll(".tab-content");
 
-        function openTab(evt, tabs) {
-
-            // Hide all tab contents
-            contents = document.getElementsByClassName("tab-content");
-            for (i = 0; i < contents.length; i++) {
-                contents[i].style.display = "none";
-            }
-
-            // Deactivate all tab links
-            tabButton = document.getElementsByClassName("tab-button");
-            for (i = 0; i < tabButton.length; i++) {
-                tabButton[i].className = tablinks[i].className.replace(" active", "");
-            }
-
-            // Show the selected tab content and activate the selected tab link
-            document.getElementById(tabs).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-
-
-    </script>
+   
 </body>
 </html>
