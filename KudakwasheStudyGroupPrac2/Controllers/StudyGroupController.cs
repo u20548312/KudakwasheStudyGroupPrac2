@@ -51,19 +51,20 @@ namespace KudakwasheStudyGroupPrac2.Controllers
 
         //Post: StudyGroup
         [HttpPost]
-        public ActionResult Create(StudyGroupModel student)
+        public ActionResult Create(StudyGroupModel studygroup)
         {
             if (ModelState.IsValid)
             {
-                students.Add(student);
+                int newstudentno = students.Count + 1;
+                studygroup.StudentNo = newstudentno;
+                students.Add(studygroup);
                 
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "StudyGroupModels");
             }
-            else
-            {
-                return View(student);
-            }
+            
+                return View(studygroup);
+            
         }
     }
 }

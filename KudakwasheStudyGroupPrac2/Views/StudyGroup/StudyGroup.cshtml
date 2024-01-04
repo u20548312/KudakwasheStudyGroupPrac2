@@ -7,11 +7,12 @@
 <br />
 <div>@Html.ActionLink("Create New", "Create", new { @class = "btn btn-info btn-md" })</div>
 <br />
-<form>
+<form id="searchform">
     <label for="search">Search String:</label><br />
     <input type="search" id="search" onkeyup="myFunction()"/>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Search" id="submit">
 </form>
+<br />
 <table class="table" id="mtable">
     <tr style=" background-color:green">
         <th>@Html.DisplayNameFor(model => model.StudentNo)</th>
@@ -32,7 +33,7 @@
 
     }
 </table>
-<button>Save to local storage</button> <button>Retrieve from local storage</button> <button>Clear local storage</button>
+<button onclick="saveTable()">Save to local storage</button> <button onclick="Retrievedata()">Retrieve from local storage</button> <button onclick="Clear()">Clear local storage</button>
 <style type="text/css">
     table th {
         border: 1px solid;

@@ -65,12 +65,12 @@
             padding: 10px;
         }
 
-        .content {
+        .tab-content {
             display: none;
             padding: 10px 20px;
         }
 
-            .content.active {
+            .tab-content.active {
                 display: block;
             }
     </style>
@@ -97,22 +97,22 @@
         <br />
         <div class="wrapper">
             <div class="buttonWrapper">
-                <button class="tab-button active" style="border-top-left-radius: 10px;" data-id="background">Biography and Background</button>
-                <button class="tab-button" data-id="hobbies">Hobbies</button>
-                <button class="tab-button" style="border-top-right-radius: 10px;" data-id="modules">Modules</button>
+                <button class="tab-button active" style="border-top-left-radius: 10px;" data-id="background" onlick="openTab(evt, "background")">Biography and Background</button>
+                <button class="tab-button" data-id="hobbies" onlick="openTab(evt, "hobbies")">Hobbies</button>
+                <button class="tab-button" style="border-top-right-radius: 10px;" onlick="openTab(evt, "modules")">Modules</button>
             </div>
             <div class="contentWrapper">
-                <p class="content active" id="background">
+                <p class="tab-content active" id="background">
                     <img src="Images/Hect1.png" alt="Image" />
                     Hector Nhlabathi is from Standerton and studies information sciences with informatics as electives.
                 </p>
 
-                <p class="content" id="hobbies">
+                <p class="tab-content" id="hobbies">
                     Hobbies iclude producing music, DJing, content creating and playing soccer.
                     <img id="Image2" src="Images/Hect2.jpg" alt="Image" />
                 </p>
 
-                <table class="content" id="modules">
+                <table class="tab-content" id="modules">
                     <tr>
                         <th>Modules Semester 1</th>
                         <th>Modules Semester 2</th>
@@ -127,25 +127,30 @@
          </div>
     </main>
     <script>
-        const tabs = document.querySelector(".wrapper");
-        const tabButton = document.querySelectorAll(".tab-button");
-        const contents = document.querySelectorAll(".content");
+        var tabs = document.querySelector(".wrapper");
+        var tabButton = document.querySelectorAll(".tab-button");
+        var contents = document.querySelectorAll(".tab-content");
 
-        tabs.onclick = e => {
-            const id = e.target.dataset.id;
-            if (id) {
-                tabButton.forEach(btn => {
-                    btn.classList.remove("active");
-                });
-                e.target.classList.add("active");
+        function openTab(evt, tabs) {
 
-                contents.forEach(content => {
-                    content.classList.remove("active");
-                });
-                const element = document.getElementById(id);
-                element.classList.add("active");
+            // Hide all tab contents
+            contents = document.getElementsByClassName("tab-content");
+            for (i = 0; i < contents.length; i++) {
+                contents[i].style.display = "none";
             }
+
+            // Deactivate all tab links
+            tabButton = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabButton.length; i++) {
+                tabButton[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the selected tab content and activate the selected tab link
+            document.getElementById(tabs).style.display = "block";
+            evt.currentTarget.className += " active";
         }
+
+
     </script>
 </body>
 </html>
